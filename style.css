@@ -1,7 +1,7 @@
 :root{
-  --bg:#0c1220; --surface:#141c2e; --ink:#eaf0fb; --muted:#9aa8c2; --line:#26324a;
-  --accent:#227BFF; --accent-ink:#06201e; --mark:#5c4a10; --mark-ink:#ffeeb5;
-  color-scheme:dark;
+  --bg:#f5f7fb; --surface:#ffffff; --ink:#0f172a; --muted:#52607a; --line:#d8dfeb;
+  --accent:#1a62d6; --accent-ink:#ffffff; --mark:#ffe08a; --mark-ink:#3d2e00;
+  color-scheme:light;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
