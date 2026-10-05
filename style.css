@@ -29,6 +29,15 @@ nav .btn{color:var(--accent-ink);padding:9px 16px;font-size:15px}
 .hero .actions{display:flex;gap:12px;flex-wrap:wrap}
 
 .demo{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
+body{overflow-x:clip}
+.hero{position:relative}
+.hero::before{content:"";position:absolute;z-index:-1;right:-6%;top:-8%;width:62%;height:120%;background:radial-gradient(closest-side,color-mix(in srgb,var(--accent) 22%,transparent),transparent);pointer-events:none}
+.hero h1{font-size:clamp(48px,7.2vw,92px);color:#0a1230}
+.hero p.lead{color:#26324d;font-size:21px}
+.demo{border-color:color-mix(in srgb,var(--accent) 35%,var(--line));box-shadow:0 28px 60px -24px color-mix(in srgb,var(--accent) 55%,transparent),0 2px 6px rgba(15,23,42,.06)}
+.query{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 6%,var(--surface))}
+.hit-top b{background:color-mix(in srgb,var(--accent) 12%,transparent);padding:1px 10px;border-radius:99px;font-weight:500}
+.hit .fix{color:#26324d}
 .demo small{color:var(--muted);font-size:13px}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
 .chip{font:500 13px "IBM Plex Sans",sans-serif;padding:6px 12px;border-radius:99px;border:1.5px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
