@@ -68,6 +68,14 @@ section h2{font-size:clamp(32px,4.4vw,52px);font-weight:700;max-width:16em}
 .cta .btn{background:var(--bg);color:var(--ink)}
 footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
+.btn,.chip{transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease,border-color .18s ease,color .18s ease}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px color-mix(in srgb,var(--accent) 35%,transparent)}
+.btn:active{transform:translateY(0);box-shadow:none}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent);box-shadow:none}
+.chip:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.cta .btn:hover{box-shadow:0 8px 20px rgba(0,0,0,.35)}
+@media (prefers-reduced-motion:reduce){.btn,.chip{transition:none}.btn:hover,.chip:hover{transform:none}}
+
 @media (max-width:860px){
   .hero{grid-template-columns:1fr;gap:40px;padding-top:24px}
   .stats,.steps,.feats{grid-template-columns:1fr;gap:32px}
