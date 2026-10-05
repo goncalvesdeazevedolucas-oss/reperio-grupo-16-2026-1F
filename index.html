@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reperio — a experiência da sua empresa, agora pesquisável</title>
+<meta name="description" content="Reperio encontra chamados parecidos no histórico da sua equipe, mesmo escritos com outras palavras.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="#top" aria-label="Reperio">Reperio<i></i></a>
+    <nav>
+      <a href="#problema">Problema</a>
+      <a href="#como">Como funciona</a>
+      <a href="#recursos">Recursos</a>
+      <a class="btn" href="#video-box">Ver demonstração</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>Não comece do zero.</h1>
+        <p class="lead">Reperio encontra, no histórico de chamados da sua equipe, os casos parecidos com o que acabou de chegar — mesmo quando foram escritos com outras palavras.</p>
+        <div class="actions">
+          <a class="btn" href="#contato">Ver demonstração</a>
+          <a class="btn ghost" href="#como">Como funciona</a>
+        </div>
+      </div>
+
+      <div class="demo" aria-live="polite">
+        <small>Novo chamado — escolha um exemplo</small>
+        <div class="chips" role="group" aria-label="Exemplos de chamado">
+          <button class="chip" aria-pressed="true" data-i="0">Impressora</button>
+          <button class="chip" aria-pressed="false" data-i="1">Acesso</button>
+          <button class="chip" aria-pressed="false" data-i="2">Wi-Fi</button>
+        </div>
+        <div class="query" id="query"></div>
+        <div id="hits"></div>
+      </div>
+    </div>
+
+    <section id="problema">
+      <h2>O conhecimento já existe. Só ninguém consegue achar.</h2>
+      <p class="sub">Ouvimos 18 pessoas que trabalham com suporte. O problema raramente é falta de registro: é reconhecer que o caso já foi resolvido.</p>
+      <div class="stats">
+        <div class="stat"><strong>83%</strong><span>já investigaram de novo um problema que tinha sido resolvido</span></div>
+        <div class="stat"><strong>72%</strong><span>veem o mesmo problema descrito de formas diferentes</span></div>
+        <div class="stat"><strong>78%</strong><span>dizem que reconhecer um caso antigo depende de quem atende</span></div>
+      </div>
+      <p class="foot-note">Fonte: formulário de validação da equipe Ennead, 18 respostas.</p>
+    </section>
+
+    <section id="como">
+      <h2>Do chamado novo à solução, em três passos.</h2>
+      <ol class="steps">
+        <li><h3>Descreva o chamado</h3><p>Escreva do jeito que o cliente contou. Sem palavras-chave, sem filtros.</p></li>
+        <li><h3>Veja casos parecidos</h3><p>A busca entende o sentido do texto e traz atendimentos anteriores com o mesmo problema.</p></li>
+        <li><h3>Reaproveite a solução</h3><p>Cada caso mostra o que foi feito e o que funcionou, para você seguir direto ao ponto.</p></li>
+      </ol>
+    </section>
+
+    <section id="video">
+      <h2>Veja o Reperio funcionando.</h2>
+      <div class="video-box">
+        <video controls preload="metadata" playsinline>
+          <source src="demo.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+      </div>
+    </section>
+
+    <section id="recursos">
+      <h2>Feito para quem atende, não para quem administra.</h2>
+      <div class="feats">
+        <div><h3>Busca por significado</h3><p>“Não imprime” e “fila travada” levam ao mesmo caso.</p></div>
+        <div><h3>Conhecimento, não só lista</h3><p>Em vez de uma pilha de tickets, você vê o diagnóstico e a solução de cada caso anterior.</p></div>
+        <div><h3>Funciona com registros fracos</h3><p>Chamados com pouca informação continuam úteis para encontrar padrões.</p></div>
+        <div><h3>Menos dependência de veteranos</h3><p>Quem chegou ontem acessa a experiência de quem está há anos.</p></div>
+      </div>
+    </section>
+
+    <div class="cta" id="contato">
+      <h2>A experiência da sua empresa, agora pesquisável.</h2>
+      <a class="btn" href="mailto:lucas.azevedo@estudantes.ifc.edu.br">Falar com a equipe</a>
+    </div>
+  </main>
+
+  <footer>
+    <span>Reperio</span>
+    <span>Equipe Ennead · Hackathon IFC Campus Concórdia</span>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
