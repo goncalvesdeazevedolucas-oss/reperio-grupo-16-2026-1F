@@ -1,27 +1,19 @@
 :root{
-  --bg:#f5f7fb; --surface:#ffffff; --ink:#0f172a; --muted:#52607a; --line:#d8dfeb;
-  --accent:#0b6e6e; --accent-ink:#ffffff; --mark:#ffe08a; --mark-ink:#3d2e00;
+  --bg:#0c1220; --surface:#141c2e; --ink:#eaf0fb; --muted:#9aa8c2; --line:#26324a;
+  --accent:#227BFF; --accent-ink:#06201e; --mark:#5c4a10; --mark-ink:#ffeeb5;
+  color-scheme:dark;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#0c1220; --surface:#141c2e; --ink:#eaf0fb; --muted:#9aa8c2; --line:#26324a;
-    --accent:#227BFF; --accent-ink:#06201e; --mark:#5c4a10; --mark-ink:#ffeeb5;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0c1220; --surface:#141c2e; --ink:#eaf0fb; --muted:#9aa8c2; --line:#26324a;
-  --accent:#227BFF; --accent-ink:#06201e; --mark:#5c4a10; --mark-ink:#ffeeb5;
-}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+html{scroll-padding-top:calc(84px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif}
 h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif;line-height:1.05;margin:0;letter-spacing:-.02em}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-header{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px}
 .logo{font:800 24px "Bricolage Grotesque",sans-serif;text-decoration:none;letter-spacing:-.03em}
 .logo i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--accent);margin-left:3px}
 nav{display:flex;gap:26px;align-items:center}
