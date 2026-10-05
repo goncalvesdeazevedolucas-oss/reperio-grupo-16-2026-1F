@@ -18,7 +18,7 @@ a{color:inherit}
 .logo i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--accent);margin-left:3px}
 nav{display:flex;gap:26px;align-items:center}
 nav a{text-decoration:none;color:var(--muted);font-size:15px}
-nav a:hover{color:var(--ink)}
+nav a:not(.btn):hover{color:var(--ink)}
 .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:13px 22px;border-radius:10px;font-weight:500;text-decoration:none;border:0;font-size:16px;cursor:pointer}
 .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
 nav .btn{color:var(--accent-ink);padding:9px 16px;font-size:15px}
