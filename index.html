@@ -7,7 +7,7 @@
 <meta name="description" content="Reperio encontra chamados parecidos no histórico da sua equipe, mesmo escritos com outras palavras.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500&family=Sora:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +17,8 @@
     <nav>
       <a href="#problema">Problema</a>
       <a href="#como">Como funciona</a>
-      <a href="#recursos">Recursos</a>
+      <a href="#demo">Na prática</a>
+      <a href="#vantagens">Vantagens</a>
       <a class="btn" href="#video">Ver demonstração</a>
     </nav>
   </div>
@@ -28,7 +29,7 @@
   <main id="top">
     <div class="hero">
       <div>
-        <h1>Não comece do zero</h1>
+        <h1>Não comece do zero.</h1>
         <p class="lead">Reperio encontra, no histórico de chamados da sua equipe, os casos parecidos com o que acabou de chegar — mesmo quando foram escritos com outras palavras.</p>
         <div class="actions">
           <a class="btn" href="#video">Ver demonstração</a>
@@ -36,21 +37,11 @@
         </div>
       </div>
 
-      <div class="demo" aria-live="polite">
-        <small>Novo chamado — escolha um exemplo</small>
-        <div class="chips" role="group" aria-label="Exemplos de chamado">
-          <button class="chip" aria-pressed="true" data-i="0">Impressora</button>
-          <button class="chip" aria-pressed="false" data-i="1">Acesso</button>
-          <button class="chip" aria-pressed="false" data-i="2">Wi-Fi</button>
-        </div>
-        <div class="query" id="query"></div>
-        <div id="hits"></div>
-      </div>
+      <img class="hero-logo" src="logo.png" alt="Logo do Reperio: lupa com linhas de texto e arcos azuis ao redor">
     </div>
 
     <section id="problema">
-      <h2>O conhecimento já existe</h2>
-      <h2>Nós achamos para você</h2>
+      <h2>O conhecimento já existe. Só ninguém consegue achar.</h2>
       <p class="sub">Ouvimos 18 pessoas que trabalham com suporte. O problema raramente é falta de registro: é reconhecer que o caso já foi resolvido.</p>
       <div class="stats">
         <div class="stat"><strong>83%</strong><span>já investigaram de novo um problema que tinha sido resolvido</span></div>
@@ -69,6 +60,21 @@
       </ol>
     </section>
 
+    <section id="demo">
+      <h2>Veja na prática.</h2>
+      <p class="sub">Escolha um chamado de exemplo e veja os casos parecidos que o Reperio encontra.</p>
+      <div class="demo" aria-live="polite">
+        <small>Novo chamado — escolha um exemplo</small>
+        <div class="chips" role="group" aria-label="Exemplos de chamado">
+          <button class="chip" aria-pressed="true" data-i="0">Impressora</button>
+          <button class="chip" aria-pressed="false" data-i="1">Acesso</button>
+          <button class="chip" aria-pressed="false" data-i="2">Wi-Fi</button>
+        </div>
+        <div class="query" id="query"></div>
+        <div id="hits"></div>
+      </div>
+    </section>
+
     <section id="video">
       <h2>Veja o Reperio funcionando.</h2>
       <div class="video-box">
@@ -79,7 +85,7 @@
       </div>
     </section>
 
-    <section id="recursos">
+    <section id="vantagens">
       <h2>Feito para quem atende, não para quem administra.</h2>
       <div class="feats">
         <div><h3>Busca por significado</h3><p>“Não imprime” e “fila travada” levam ao mesmo caso.</p></div>
