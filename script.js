@@ -20,3 +20,33 @@ function render(i){
 }
 chips.forEach(function(c){c.addEventListener("click",function(){render(Number(c.dataset.i))})});
 render(0);
+
+/* contador dos números da seção Problema */
+(function(){
+  var nums=document.querySelectorAll(".stat strong");
+  if(!nums.length||!("IntersectionObserver" in window)) return;
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var dur=1600;
+  nums.forEach(function(el){
+    el.dataset.alvo=parseInt(el.textContent,10);
+    el.dataset.sufixo=el.textContent.replace(/[0-9]/g,"");
+    el.textContent="0"+el.dataset.sufixo;
+  });
+  function animar(el){
+    var alvo=Number(el.dataset.alvo),suf=el.dataset.sufixo,ini=null;
+    function passo(t){
+      if(ini===null) ini=t;
+      var p=Math.min((t-ini)/dur,1);
+      var e=1-Math.pow(1-p,3);
+      el.textContent=Math.round(alvo*e)+suf;
+      if(p<1) requestAnimationFrame(passo);
+    }
+    requestAnimationFrame(passo);
+  }
+  var obs=new IntersectionObserver(function(itens){
+    itens.forEach(function(i){
+      if(i.isIntersecting){animar(i.target);obs.unobserve(i.target)}
+    });
+  },{threshold:0.6});
+  nums.forEach(function(el){obs.observe(el)});
+})();
