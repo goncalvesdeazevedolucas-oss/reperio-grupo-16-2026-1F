@@ -24,7 +24,7 @@ nav a:not(.btn):hover{color:var(--ink)}
 .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
 nav .btn{color:var(--accent-ink);padding:9px 16px;font-size:15px}
 
-.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;padding:56px 0 150px}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;padding:56px 0 160px}
 .hero h1{font-size:clamp(44px,6.4vw,80px);font-weight:800}
 .hero p.lead{font-size:20px;color:var(--muted);max-width:30em;margin:22px 0 32px}
 .hero .actions{display:flex;gap:12px;flex-wrap:wrap}
