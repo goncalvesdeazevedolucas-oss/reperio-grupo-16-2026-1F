@@ -14,8 +14,8 @@ a{color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 .topbar{position:sticky;top:0;z-index:10;background:var(--bg)}
 .bar{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px}
-.logo{color:#fff;font:700 26px "Sora",system-ui,sans-serif;text-decoration:none;letter-spacing:-.02em}
-.logo i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--accent);margin-left:3px}
+.logo{display:inline-flex;align-items:center;gap:8px;color:#fff;font:700 26px "Sora",system-ui,sans-serif;text-decoration:none;letter-spacing:-.02em}
+.logo img{display:block;height:30px;width:auto}
 nav{display:flex;gap:26px;align-items:center}
 nav a{text-decoration:none;color:var(--muted);font-size:15px}
 nav a:not(.btn):hover{color:var(--ink)}
@@ -110,7 +110,8 @@ footer{border-top:1px solid var(--line);padding:40px 0 56px;color:var(--muted);f
 
 @media (max-width:860px){
   .hero{grid-template-columns:1fr;gap:40px;padding-top:24px}
-  .stats,.steps,  nav a:not(.btn){display:none}
+  .stats,.steps{grid-template-columns:1fr;gap:32px}
+  nav a:not(.btn){display:none}
   .cta{padding:40px 28px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
